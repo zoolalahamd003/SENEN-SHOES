@@ -1,6 +1,6 @@
 // ==================== CONSTANTS ====================
 
-const API_BASE = "http://localhost:3000";
+const API_BASE = "https://senen-shoes.onrender.com";
 
 // Keep in sync with COLOR_PALETTE in server.js / the admin panel's JS.
 const COLOR_SWATCHES = {
