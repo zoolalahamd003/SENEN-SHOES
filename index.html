@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes for everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ecommerces.css" />
+  </head>
+  <body>
+    <header id="topbar">
+      <div id="topbar-brand">
+        <span id="topbar-mark">Shoe Stockroom</span>
+        <h1>Shoes for everyone</h1>
+      </div>
+      <button id="cartbtn">
+        Cart
+        <span id="cartcount">0</span>
+      </button>
+    </header>
+
+    <!-- ==================== SEARCH ==================== -->
+    <section id="searcharea">
+      <input id="searchinput" type="text" placeholder="Search shoes…" />
+      <button id="searchbtn">Search</button>
+      <button id="resetsearch">Reset</button>
+
+      <div class="search-options">
+        <label><input type="checkbox" id="checkboxname" /> By name</label>
+        <label><input type="checkbox" id="checkboxcompany" /> By brand</label>
+        <label><input type="checkbox" id="checkboxgender" /> By gender</label>
+        <label
+          ><input type="checkbox" id="checkboxcondition" /> By condition</label
+        >
+      </div>
+    </section>
+
+    <!-- ==================== PRODUCTS ==================== -->
+    <section id="ourproducts">
+      <h2>Our products</h2>
+      <div id="productscontainer"></div>
+    </section>
+
+    <!-- ==================== PRODUCT DETAIL MODAL ==================== -->
+    <div id="detailoverlay">
+      <div id="detailbox">
+        <button id="closedetailbtn">✕</button>
+        <div id="detailslider"></div>
+
+        <div id="detailinfo">
+          <span id="detailbrand"></span>
+          <h3 id="detailname"></h3>
+          <p id="detailprice"></p>
+          <p id="detailmeta"></p>
+
+          <div id="detailcolors" class="colorchips"></div>
+
+          <label>Size</label>
+          <div id="detailsizes"></div>
+
+          <label for="detailqty">Quantity</label>
+          <input id="detailqty" type="number" min="1" value="1" />
+
+          <button id="detailaddbtn" disabled>Select a size</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== CART DRAWER ==================== -->
+    <div id="cartoverlay"></div>
+    <aside id="cartdrawer">
+      <div id="cartdrawer-head">
+        <h3 id="cartdrawer-title">Your cart</h3>
+        <button id="closecartbtn">✕</button>
+      </div>
+      <div id="cartdrawer-body"></div>
+    </aside>
+
+    <!-- ==================== ORDER CONFIRMATION ==================== -->
+    <div id="ordermodaloverlay">
+      <div id="ordermodal">
+
+       <h2>Order received 🎉</h2>
+
+<p>
+  Your order has been received and your payment is
+  pending verification.
+</p>
+
+<p id="orderidline"></p>
+        <button id="continueshoppingbtn">Continue shopping</button>
+      <div>
+        
+      </div>
+      </div>
+    </div>
+
+
+
+<!-- ==================== PAYMENT INSTRUCTIONS ==================== -->
+<div id="paymentmodaloverlay">
+  <div id="paymentmodal">
+
+    <h2>Complete Your Payment</h2>
+
+    <p id="paymentmethodline"></p>
+
+    <p id="paymentamountline"></p>
+
+    <p id="paymentnumberline"></p>
+
+    <p>
+      Please send the above amount to the displayed account.
+      After making the payment, click "I've Paid".
+    </p>
+
+    <p>
+      Our team will verify your payment and confirm your order,
+      usually within 1 hour.
+    </p>
+
+    <label for="paymentscreenshot">
+      Payment screenshot (optional)
+    </label>
+
+    <input
+      type="file"
+      id="paymentscreenshot"
+      accept="image/*"
+    />
+
+    <button id="paynowbtn">I've Paid</button>
+
+    <button id="cancelpaymentbtn">Cancel</button>
+
+  </div>
+</div>
+
+    <!-- ==================== MESSAGE MODAL (errors / empty search) ==================== -->
+    <div id="msgmodaloverlay">
+      <div id="msgmodal">
+        <p id="msgmodaltext"></p>
+        <button id="closemsgmodalbtn">OK</button>
+      </div>
+    </div>
+
+    <!-- ==================== LOADING ==================== -->
+    <div id="loadingOverlay">
+      <div id="loadingBox">
+        <div id="loadingSpinner"></div>
+        <p>Loading…</p>
+      </div>
+    </div>
+
+    <script src="ecommerce.js"></script>
+  </body>
+</html> 
+
