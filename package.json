@@ -6,6 +6,7 @@
     "mongodb": "^7.6.0",
     "mongoose": "^9.9.5",
     "multer": "^2.3.0",
-    "nodemailer": "^10.0.1"
+    "nodemailer": "^10.0.1",
+    "resend": "^6.32.1"
   }
 }
